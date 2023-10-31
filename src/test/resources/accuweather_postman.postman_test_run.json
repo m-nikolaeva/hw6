@@ -1,0 +1,895 @@
+{
+	"id": "e2ca8e6f-d7d9-42f2-8378-30d640c30647",
+	"name": "accuweather_postman",
+	"timestamp": "2023-10-13T09:49:19.894Z",
+	"collection_id": "27621346-d1fdbd8b-bae8-43c1-a678-2e049ab152a5",
+	"folder_id": 0,
+	"environment_id": "27621346-ac85db6e-f6e3-4937-b043-060d41fbe1cd",
+	"totalPass": 58,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-10-13T09:49:15.657Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5f8e2e90-344b-4efd-aeb5-3792eb7c5df9",
+			"name": "get_admin_area_list",
+			"url": "http://dataservice.accuweather.com/locations/v1/adminareas/50?apikey=AUTH_VALUE",
+			"time": 136,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				136
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "54124fef-ed1b-45e3-8b4d-e5052408d5b2",
+			"name": "get_country_list",
+			"url": "http://dataservice.accuweather.com/locations/v1/countries/50?apikey=AUTH_VALUE",
+			"time": 139,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				139
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "c4457eca-5cdf-4f37-86fb-89c6ca5c14ad",
+			"name": "get_region_list",
+			"url": "http://dataservice.accuweather.com/locations/v1/regions?apikey=AUTH_VALUE",
+			"time": 136,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				136
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "195e3ba4-f48e-4522-be10-389c242192e3",
+			"name": "get_top_cities_list",
+			"url": "http://dataservice.accuweather.com/locations/v1/topcities/50?apikey=AUTH_VALUE",
+			"time": 138,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Body contains: Africa": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: Africa": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				138
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Body contains: Africa": true
+				}
+			]
+		},
+		{
+			"id": "255d54e7-8597-48c9-a101-447efd1a68e7",
+			"name": "get_autocomplete",
+			"url": "http://dataservice.accuweather.com/locations/v1/cities/autocomplete?q=texas&apikey=AUTH_VALUE",
+			"time": 138,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: Texas": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: Texas": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				138
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: Texas": true
+				}
+			]
+		},
+		{
+			"id": "cec6cd38-667c-489c-9883-23dbb8a8652d",
+			"name": "get_city_neighbors_by_locationkey",
+			"url": "http://dataservice.accuweather.com/locations/v1/cities/neighbors/35?apikey=AUTH_VALUE",
+			"time": 137,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: Georgia": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: Georgia": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				137
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: Georgia": true
+				}
+			]
+		},
+		{
+			"id": "8db04a83-2403-473c-b4b3-7a1f2f932de2",
+			"name": "get_search_by_locationkey",
+			"url": "http://dataservice.accuweather.com/locations/v1/35?apikey=AUTH_VALUE",
+			"time": 138,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: Eufaula": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: Eufaula": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				138
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: Eufaula": true
+				}
+			]
+		},
+		{
+			"id": "d2b657af-fb76-4bcf-b1fd-b6c32cd0ebd7",
+			"name": "get_city_search_by_countrycode",
+			"url": "http://dataservice.accuweather.com/locations/v1/cities/GB/search?q=york&apikey=AUTH_VALUE",
+			"time": 370,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: United Kingdom": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: United Kingdom": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				370
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: United Kingdom": true
+				}
+			]
+		},
+		{
+			"id": "67f0f440-66a8-447f-9e92-c6a5fe4e610f",
+			"name": "get_text_search_by_countrycode",
+			"url": "http://dataservice.accuweather.com/locations/v1/GB/search?q=york&apikey=AUTH_VALUE",
+			"time": 138,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: United Kingdom": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: United Kingdom": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				138
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: United Kingdom": true
+				}
+			]
+		},
+		{
+			"id": "ad9c10b4-6547-4c9a-95d3-8303bbe330ef",
+			"name": "get_city_search_by_countrycode_and_admincode",
+			"url": "http://dataservice.accuweather.com/locations/v1/cities/GB/YOR/search?q=york&apikey=AUTH_VALUE",
+			"time": 138,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: United Kingdom": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: United Kingdom": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				138
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: United Kingdom": true
+				}
+			]
+		},
+		{
+			"id": "3444babf-44e9-445d-b2d0-c2d8a00e800e",
+			"name": "get_text_search_by_countrycode_and_admincode",
+			"url": "http://dataservice.accuweather.com/locations/v1/GB/YOR/search?q=york&apikey=AUTH_VALUE",
+			"time": 137,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: United Kingdom": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: United Kingdom": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				137
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: United Kingdom": true
+				}
+			]
+		},
+		{
+			"id": "532f88bc-26b1-469e-a57b-2c08983fb3bf",
+			"name": "get_city_search",
+			"url": "http://dataservice.accuweather.com/locations/v1/cities/search?q=york&apikey=AUTH_VALUE",
+			"time": 152,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: York": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: York": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				152
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: York": true
+				}
+			]
+		},
+		{
+			"id": "a6dade47-64c4-4d59-a56d-4405e8a6242f",
+			"name": "get_poi_search",
+			"url": "http://dataservice.accuweather.com/locations/v1/poi/search?q=york&type=29&apikey=AUTH_VALUE",
+			"time": 138,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: Airport": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: Airport": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				138
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: Airport": true
+				}
+			]
+		},
+		{
+			"id": "3c536081-0c1e-41b7-b408-d5014b9ba60f",
+			"name": "get_text_search",
+			"url": "http://dataservice.accuweather.com/locations/v1/search?q=greenland&apikey=AUTH_VALUE",
+			"time": 143,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: Greenland": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: Greenland": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				143
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: Greenland": true
+				}
+			]
+		},
+		{
+			"id": "c8d7af78-fcc3-4c00-b51d-e0f62b69a9bb",
+			"name": "get_postal_code_search",
+			"url": "http://dataservice.accuweather.com/locations/v1/postalcodes/search?q=1234&apikey=AUTH_VALUE",
+			"time": 142,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: 1234": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: 1234": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				142
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: 1234": true
+				}
+			]
+		},
+		{
+			"id": "1d83b9ee-cd7c-4798-9c90-45272dbb432a",
+			"name": "get_postal_code_search_by_countrycode",
+			"url": "http://dataservice.accuweather.com/locations/v1/postalcodes/GB/search?q=YO30 7&apikey=AUTH_VALUE",
+			"time": 139,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: York": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: York": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				139
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: York": true
+				}
+			]
+		},
+		{
+			"id": "6be6fb2c-076a-4d56-bd05-49e7a006b543",
+			"name": "get_poi_search_by_countrycode",
+			"url": "http://dataservice.accuweather.com/locations/v1/poi/US/search?q=york&type=29&apikey=AUTH_VALUE",
+			"time": 236,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: Pennsylvania": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: Pennsylvania": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				236
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: Pennsylvania": true
+				}
+			]
+		},
+		{
+			"id": "e1289149-125d-40a0-bf85-74bdbb17a151",
+			"name": "get_poi_search_by_countrycode_and_admincode",
+			"url": "http://dataservice.accuweather.com/locations/v1/poi/US/PA/search?q=york&type=29&apikey=AUTH_VALUE",
+			"time": 139,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: North America": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: North America": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				139
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: North America": true
+				}
+			]
+		},
+		{
+			"id": "00808fef-f18b-46d3-81cc-a45b7828d842",
+			"name": "get_geoposition_search",
+			"url": "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?q=40.79, 77.86&apikey=AUTH_VALUE",
+			"time": 136,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true,
+				"Body contains: China": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains: China": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				136
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true,
+					"Body contains: China": true
+				}
+			]
+		},
+		{
+			"id": "ad51e34a-bdd5-4c7a-b9fd-2b3b1ab12b01",
+			"name": "get_5days_of_weather_alarms",
+			"url": "http://dataservice.accuweather.com/alarms/v1/5day/46?apikey=AUTH_VALUE",
+			"time": 147,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				147
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true
+				}
+			]
+		},
+		{
+			"id": "14d59045-9abf-4ea7-9fa9-30a5e5aba144",
+			"name": "get_10days_of_weather_alarms",
+			"url": "http://dataservice.accuweather.com/alarms/v1/5day/46?apikey=AUTH_VALUE",
+			"time": 141,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				141
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1500ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3258,
+	"collection": {
+		"requests": [
+			{
+				"id": "5f8e2e90-344b-4efd-aeb5-3792eb7c5df9",
+				"method": "GET"
+			},
+			{
+				"id": "54124fef-ed1b-45e3-8b4d-e5052408d5b2",
+				"method": "GET"
+			},
+			{
+				"id": "c4457eca-5cdf-4f37-86fb-89c6ca5c14ad",
+				"method": "GET"
+			},
+			{
+				"id": "195e3ba4-f48e-4522-be10-389c242192e3",
+				"method": "GET"
+			},
+			{
+				"id": "255d54e7-8597-48c9-a101-447efd1a68e7",
+				"method": "GET"
+			},
+			{
+				"id": "cec6cd38-667c-489c-9883-23dbb8a8652d",
+				"method": "GET"
+			},
+			{
+				"id": "8db04a83-2403-473c-b4b3-7a1f2f932de2",
+				"method": "GET"
+			},
+			{
+				"id": "d2b657af-fb76-4bcf-b1fd-b6c32cd0ebd7",
+				"method": "GET"
+			},
+			{
+				"id": "67f0f440-66a8-447f-9e92-c6a5fe4e610f",
+				"method": "GET"
+			},
+			{
+				"id": "ad9c10b4-6547-4c9a-95d3-8303bbe330ef",
+				"method": "GET"
+			},
+			{
+				"id": "3444babf-44e9-445d-b2d0-c2d8a00e800e",
+				"method": "GET"
+			},
+			{
+				"id": "532f88bc-26b1-469e-a57b-2c08983fb3bf",
+				"method": "GET"
+			},
+			{
+				"id": "a6dade47-64c4-4d59-a56d-4405e8a6242f",
+				"method": "GET"
+			},
+			{
+				"id": "3c536081-0c1e-41b7-b408-d5014b9ba60f",
+				"method": "GET"
+			},
+			{
+				"id": "c8d7af78-fcc3-4c00-b51d-e0f62b69a9bb",
+				"method": "GET"
+			},
+			{
+				"id": "1d83b9ee-cd7c-4798-9c90-45272dbb432a",
+				"method": "GET"
+			},
+			{
+				"id": "6be6fb2c-076a-4d56-bd05-49e7a006b543",
+				"method": "GET"
+			},
+			{
+				"id": "e1289149-125d-40a0-bf85-74bdbb17a151",
+				"method": "GET"
+			},
+			{
+				"id": "00808fef-f18b-46d3-81cc-a45b7828d842",
+				"method": "GET"
+			},
+			{
+				"id": "ad51e34a-bdd5-4c7a-b9fd-2b3b1ab12b01",
+				"method": "GET"
+			},
+			{
+				"id": "14d59045-9abf-4ea7-9fa9-30a5e5aba144",
+				"method": "GET"
+			}
+		]
+	}
+}

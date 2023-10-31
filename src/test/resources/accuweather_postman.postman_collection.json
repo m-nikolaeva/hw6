@@ -1,0 +1,1463 @@
+{
+	"info": {
+		"_postman_id": "d1fdbd8b-bae8-43c1-a678-2e049ab152a5",
+		"name": "accuweather_postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27621346"
+	},
+	"item": [
+		{
+			"name": "Locations_api_list",
+			"item": [
+				{
+					"name": "get_admin_area_list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/adminareas/50",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"adminareas",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_country_list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/countries/50",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"countries",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_region_list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/regions",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"regions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_top_cities_list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: Santiago\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Santiago\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/topcities/50",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"topcities",
+								"50"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locacion_api_autocomplete",
+			"item": [
+				{
+					"name": "get_autocomplete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: Texas\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Texas\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/cities/autocomplete?q=tex",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"cities",
+								"autocomplete"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "tex"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locations_api_location_key",
+			"item": [
+				{
+					"name": "get_city_neighbors_by_locationkey",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: Georgia\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Georgia\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/cities/neighbors/35",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"cities",
+								"neighbors",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_search_by_locationkey",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: Eufaula\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Eufaula\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/35",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"35"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locations_api_text_search",
+			"item": [
+				{
+					"name": "get_city_search_by_countrycode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: United Kingdom\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"United Kingdom\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/cities/GB/search?q=york",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"cities",
+								"GB",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "york"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_text_search_by_countrycode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: United Kingdom\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"United Kingdom\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/GB/search?q=york",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"GB",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "york"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_city_search_by_countrycode_and_admincode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: United Kingdom\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"United Kingdom\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/cities/GB/YOR/search?q=york",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"cities",
+								"GB",
+								"YOR",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "york"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_text_search_by_countrycode_and_admincode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: United Kingdom\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"United Kingdom\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/GB/YOR/search?q=york",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"GB",
+								"YOR",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "york"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_city_search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: York\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"York\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/cities/search?q=york",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"cities",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "york"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_poi_search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: Airport\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Airport\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/poi/search?q=york&type=29",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"poi",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "york"
+								},
+								{
+									"key": "type",
+									"value": "29"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_text_search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: Greenland\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Greenland\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/search?q=greenland",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "greenland"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_postal_code_search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: 1234\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"1234\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/postalcodes/search?q=1234",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"postalcodes",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_postal_code_search_by_countrycode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: York\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"York\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/postalcodes/GB/search?q=YO30 7",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"postalcodes",
+								"GB",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "YO30 7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_poi_search_by_countrycode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: Pennsylvania\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Pennsylvania\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/poi/US/search?q=york&type=29",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"poi",
+								"US",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "york"
+								},
+								{
+									"key": "type",
+									"value": "29"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_poi_search_by_countrycode_and_admincode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: North America\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"North America\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/poi/US/PA/search?q=york&type=29",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"poi",
+								"US",
+								"PA",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "york"
+								},
+								{
+									"key": "type",
+									"value": "29"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locations_api_geoposition",
+			"item": [
+				{
+					"name": "get_geoposition_search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									"pm.test(\"Body contains: China\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"China\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?q=40.79, 77.86",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"locations",
+								"v1",
+								"cities",
+								"geoposition",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "40.79, 77.86"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Weather_alarms_api",
+			"item": [
+				{
+					"name": "get_5days_of_weather_alarms",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/alarms/v1/5day/46",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"alarms",
+								"v1",
+								"5day",
+								"46"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_10days_of_weather_alarms",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{apikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dataservice.accuweather.com/alarms/v1/5day/46",
+							"protocol": "http",
+							"host": [
+								"dataservice",
+								"accuweather",
+								"com"
+							],
+							"path": [
+								"alarms",
+								"v1",
+								"5day",
+								"46"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
