@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a34b909-9d1f-4c19-a2de-2a66e7f079e4" name="Changes" comment="added hw6_intro_to_test_automation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GetAutocompleteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetAutocompleteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GetCityNeighborsByLocationkeyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetCityNeighborsByLocationkeyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GetFiveDaysOfWeatherAlarmsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetFiveDaysOfWeatherAlarmsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GetGeopositionSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetGeopositionSearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GetPostalCodeSearchByCountrycodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetPostalCodeSearchByCountrycodeTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="9a34b909-9d1f-4c19-a2de-2a66e7f079e4" name="Changes" comment="added hw6_intro_to_test_automation_allure" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,11 +55,20 @@
       <option name="project" value="LOCAL" />
       <updated>1698752919411</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added hw6_intro_to_test_automation_allure">
+      <option name="closed" value="true" />
+      <created>1698756135725</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698756135725</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added hw6_intro_to_test_automation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added hw6_intro_to_test_automation" />
+    <MESSAGE value="added hw6_intro_to_test_automation_allure" />
+    <option name="LAST_COMMIT_MESSAGE" value="added hw6_intro_to_test_automation_allure" />
   </component>
 </project>
