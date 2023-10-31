@@ -1,12 +1,21 @@
+import io.qameta.allure.*;
 import org.hamcrest.Matchers;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
+@Epic(value = "Тестирование API https://developer.accuweather.com/accuweather-locations-api/apis")
+@Feature(value = "Домашнее задание #6")
 public class GetTopCitiesListTest extends AccuweatherAbstractTest{
 
     @Test
+    @DisplayName("TopCitiesListTest")
+    @Description("GET TopCitiesListCodeSuccessful")
+    @Severity(SeverityLevel.NORMAL)
+    @Owner("Николаева Марина")
+    @Story(value = "Тестирование метода List")
     void getTopCitiesListCodeSuccessful(){
         given()
                 .param("apikey", getApiKey())
@@ -18,6 +27,11 @@ public class GetTopCitiesListTest extends AccuweatherAbstractTest{
     }
 
     @Test
+    @DisplayName("TopCitiesListTest")
+    @Description("GET TopCitiesListHasSantiago")
+    @Severity(SeverityLevel.NORMAL)
+    @Owner("Николаева Марина")
+    @Story(value = "Тестирование метода List")
     void getTopCitiesListHasSantiago(){
         given()
                 .param("apikey", getApiKey())
